@@ -11,6 +11,13 @@
 	"engines": {
 		"vscode": "^1.46.0"
 	},
+	"keywords": [
+		"prisma schema tool",
+		"prisma",
+		"snake case",
+		"camel case",
+		"prisma tool"
+	],
 	"categories": [
 		"Other"
 	],
