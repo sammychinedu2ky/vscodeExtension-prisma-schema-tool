@@ -57,5 +57,7 @@ prisma.findOne({
 - select Prisma Schema Convert menu option
 - The file should be converted by now 
 
+You can check out my blog [swacblooms](https://swacblooms.com/manipulate-the-prisma-schema-using-regex/) for details on this extension
+
 ### Contact
 - sammychinedu2ky@gmail.com

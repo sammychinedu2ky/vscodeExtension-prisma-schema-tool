@@ -3,6 +3,7 @@
 	"displayName": "Prisma-Schema-Tool(snakeCase to camelCase)",
 	"description": "This extension was designed to convert snake-case models or fields in your prisma schema to camael-case",
 	"publisher": "Samson",
+	"icon": "https://t.ly/oqp9",
 	"repository": {
 		"url": "https://github.com/sammychinedu2ky/vscodeExtension-prisma-schema-tool.git"
 	},
