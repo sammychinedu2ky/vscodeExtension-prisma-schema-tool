@@ -47,7 +47,7 @@ prisma.findOne({
   alpha3Code   String    @unique @map("alpha3_code")
   name         String    @unique
   demonym      String?
-  continentId  String.   @map("continent_id")
+  continentId  String   @map("continent_id")
   continent    Continent @relation(fields: [continentId], references: [id])
 }
 `
