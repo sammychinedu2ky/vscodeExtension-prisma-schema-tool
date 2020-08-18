@@ -1,6 +1,5 @@
 import * as vscode from 'vscode';
 import converter from './converter'
-import { TextEncoder } from 'util';
 
 export function activate(context: vscode.ExtensionContext) {
 	let disposable = vscode.commands.registerCommand('Prisma-Schema-Tool.helloWorld', async (e) => {
