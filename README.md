@@ -11,7 +11,7 @@ But you might want to use the prisma api to interact with the field using snake 
 Example using:- 
 
 ```
-prisma.findOne({
+prisma.findUnique({
     where:{
         userId:${something}
     }
@@ -19,7 +19,7 @@ prisma.findOne({
 
 Instead of
 
-prisma.findOne({
+prisma.findUnique({
     where:{
         user_id:${something}
     }
@@ -30,25 +30,39 @@ prisma.findOne({
 
 ```
 `model country {
-  id           String    @id
+  id           String    @id @default(cuid())
   alpha2_code  String    @unique
   alpha3_code  String    @unique
   name         String    @unique
   demonym      String?
   continent_id String
-  continent    continent @relation(fields: [continent_id], references: [id])
+  continent    Continent @relation(fields: [continent_id], references: [id])
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 }`
+
+`model Continent {
+  id           String    @id @default(cuid())
+  name         String    @unique
+  countries    Country[]
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+`
+
 
 //convert the code above to the one below
 
 `model country {
-  id           String    @id
+  id           String    @id @default(cuid())
   alpha2Code   String    @unique @map("alpha2_code")
   alpha3Code   String    @unique @map("alpha3_code")
   name         String    @unique
   demonym      String?
   continentId  String   @map("continent_id")
   continent    Continent @relation(fields: [continentId], references: [id])
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 }
 `
 ```
