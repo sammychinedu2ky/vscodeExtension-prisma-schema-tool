@@ -75,3 +75,7 @@ You can check out my blog [swacblooms](https://swacblooms.com/manipulate-the-pri
 
 ### Contact
 - sammychinedu2ky@gmail.com
+
+# This repository is currently not up to speed with Prisma's development.
+ So if you're seeing this now (3rd,APRIL,2021) or sometime in the future, It is actually deprecated.
+ Thank you 😅
